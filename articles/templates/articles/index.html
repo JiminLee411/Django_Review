@@ -1,0 +1,10 @@
+{% extends 'articles/base.html'%}
+{% load static %}
+{% block body %}
+    <h1>게시판 환영!!!</h1>
+    {% for i in articles %}
+        <p><a href="{{i.pk}}">{{i.title}}</a></p>
+        <p>{{i.content}}</p>
+    {% endfor %}
+    <a href="{% url 'articles:create' %}"><button>글 작성</button></a>
+{% endblock %}

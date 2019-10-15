@@ -1,0 +1,8 @@
+{% extends 'articles/base.html' %}
+{% block body %}
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{article_form}}
+    <input type="submit" value="저장하기">
+  </form>
+{% endblock %}
